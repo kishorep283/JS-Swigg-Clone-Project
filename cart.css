@@ -76,6 +76,8 @@ body{
     /* font-size: 1.5rem; */
     width: 10%;
     height: 15%;
+    border-radius: 50%;
+    color: red;
 }
 .image button:hover{
     background-color: skyblue;
@@ -176,7 +178,8 @@ body{
         font-size: 1rem;
     }
     .nameof{
-        font-size: 1rem;
+        font-size: 1.4rem;
+        color:#071952;
     }
     .antyy{
         font-size: 1rem;
@@ -185,6 +188,9 @@ body{
         text-align: start;
     }
     .increase{
+        padding-right: 10px;
+    }
+    .decrease{
         padding-right: 10px;
     }
 
