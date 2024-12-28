@@ -1,208 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      /* General Body Styling */
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  margin-top: 10%;
-  background-image: url(./homepage_images/cak-2.jpg);
-  object-fit: cover;
-}
-
-/* Headings */
-h2 {
-  color: blue;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-h1{
-  color: magenta;
-}
-.black{
-  color: black;
-}
-.black a{
-  color: blue;
-}
-.divv{
-  background-color: lightgrey;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-/* Fieldsets */
-fieldset {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-legend {
-  padding: 0 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #0056b3;
-}
-
-/* Input Fields */
-input {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1em;
-  box-sizing: border-box;
-}
-
-input:focus {
-  border-color: #0056b3;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
-}
-
-/* Buttons */
-button {
-  padding: 10px 20px;
-  background-color: #0056b3;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #003d80;
-}
-
-/* Message Div */
-.message {
-  margin-top: 10px;
-  font-size: 1em;
-}
-
-/* Success Message */
-.message.success {
-  color: green;
-}
-
-/* Error Message */
-.message.error {
-  color: red;
-}
-p{
-  color: white;
-}
-a{
-  color:aqua;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  body {
-    margin: 10px;
-  }
-
-  fieldset {
-    padding: 10px;
-  }
-
-  input {
-    max-width: 100%;
-  }
-
-  button {
-    width: 100%;
-    padding: 10px;
-  }
-}
-
-    </style>
-  </head>
-  <body>
-    <div class="divv">
-      <!-- <h1>Welcome to Swift</h2> -->
-      <h2>Sign Up</h2>
-      <input type="email" id="signupEmail" placeholder="Email" />
-      <input type="password" id="signupPassword" placeholder="Password" />
-      <button id="btn1">Sign Up</button>
-      <p class="black">Already have an account? login here<a href="./login.html" id="login">Login</a></p>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="header">
+      <div class="logo">
+        <h1>Swift</h1>
+        <img src="./main_icon-removebg-preview.png">
+      </div>
+      <ul id="menu-list">
+        <!-- <li><a href="#">Search</a>&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i></li> -->
+        <li><a href="./corporate.html">Swift Corporate</a>&nbsp;&nbsp;<i class="fa fa-globe" aria-hidden="true"></i></li>
+        <li><a href="./partner.html">Partner With Us</a>&nbsp;&nbsp;<i class="fa-solid fa-handshake-angle"></i></li>
+        <!-- <li><a href="./signUp.html">Log In</a>&nbsp;&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></li> -->
+        <li><a href="./cart.html">Cart&nbsp;&nbsp;<i class="fa-solid fa-cart-shopping"></i><span class="spa">0</span></a></li>          
+      </ul>
+      <div class="menu-bars">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+  </header>
+  <section class="show-container">
+    <div class="showmain">
+      <div class="left">
+        <h1>Welcome to <span class = "h1">Swift</span></h1>
+        <h2>The World of Fresh & Tasty Food</h2>
+        <p>Welcome to our food delivery platform, where convenience meets variety! Our website offers a seamless and user-friendly experience, allowing customers to easily explore a wide range of local restaurants and cuisines. Whether you're craving a quick snack, a full meal, or something special, we’ve got you covered.</p>
+        <!-- <p>jksdncksjnfkesjf</p> -->
+      </div>
+      <div class="right">
+        <img src="./homepage_images/chef-removebg-preview.png" alt="Cake">
+      </div>
     </div>
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-        const firebaseConfig = {
-          apiKey: "AIzaSyDG_Kur0oyNqEXOqShx01utx0X-V18wr4E",
-          authDomain: "projectlogin-6d609.firebaseapp.com",
-          projectId: "projectlogin-6d609",
-          storageBucket: "projectlogin-6d609.firebasestorage.app",
-          messagingSenderId: "612238451985",
-          appId: "1:612238451985:web:baac97acf8644ebf9318b0"
-        };
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      var newbtn1 = document.getElementById("btn1");
-      var newbtn2 = document.getElementById("btn2");
-      newbtn1.addEventListener("click", fun1);
-      function fun1() {
-        var email = document.getElementById("signupEmail").value;
-        var password = document.getElementById("signupPassword").value;
-        console.log(email, password);
-        createUserWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            // Signed up
-            alert("Signup successful!");
-            const user = userCredential.user;
-            // ...
-          })
-          .catch((error) => {
-            alert(`Signup failed: ${error.message}`);
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-          });
-      }
-    //   newbtn2.addEventListener("click", fun2);
-    //   function fun2(){
-    //     var email = document.getElementById("loginEmail").value;
-    //     var password = document.getElementById("loginPassword").value;
-    //     console.log(email, password);
-    //     signInWithEmailAndPassword(auth, email, password)
-    //             .then((userCredential) => {
-    //                 const user = userCredential.user;
-    //                 console.log("User logged in:", user);
-    //                 alert("Login successful!");
-    //                 window.location.href = "dashboard.html"
-    //             })
-    //             .catch((error) => {
-    //                 const errorCode = error.code;
-    //                 const errorMessage = error.message;
-    //                 console.error("Login error", errorCode, errorMessage);
-    //                 alert(`Login failed: ${errorMessage}`);
-    //             });
-    //     }
-    </script>
-  </body>
+  </section>
+  <section class="speakers-section">
+    <h2 class="mind">What's on your Mind</h2>
+    <div id="selectedSpeaker" class="selected-speaker" hidden>
+      <p id="selectedSpeakerDescription" class="selected-speaker-description"></p>
+      <i id="closeSpeakerDetails" class="close-icon fas fa-times-circle" aria-label="Close Speaker Details"></i>
+    </div>
+    <div class="carousel-container">
+      <button class="carousel-control left" aria-label="Previous Speaker"><i
+              class="fa-solid fa-chevron-left"></i></button>
+      <div class="speakers-slider" id="speakersSlider"></div>
+      <button class="carousel-control right" aria-label="Next Speaker"><i
+              class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div id="loginFormContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="email" id="loginEmail" name="email" placeholder="Email" required>
+          <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="switchToRegister">Register here</a></p>
+        <p id="loginErrorMessage" style="color: red;"></p>
+        <button id="guest">Guest Entry</button>
+      </div>
+      <div id="registerFormContainer" style="display: none;">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <input type="email" id="registerEmail" name="email" placeholder="Email" required>
+          <input type="password" id="registerPassword" name="password" placeholder="Password" required>
+          <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+        <p id="registerErrorMessage" style="color: red;"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="restaurent">
+    <div class="search">
+      <div class="hyder">
+        <h2>Top restaurents chains in Hyderabad</h2>
+      </div>
+      <div class="tags">
+        <button class="delivery">Fast Delivery</button>
+        <button class="ratings">ratings 4++</button>
+        <button class="th300">Less than 300</button>
+        <button class="f400">300 - 400</button>
+        <input type="text" class="inp" placeholder="search.....">
+
+      </div>
+    </div>
+    <div class ="online-food">  
+          <!-- <div class="sub">
+            <img src="">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+
+          </div> -->
+    </div>  
+  </div>
+  <footer>
+    <div id="foot">
+        <div class="fotty">
+          <div class="icon">
+            <img src="./main_icon-removebg-preview.png" alt="Icon">
+            <span>Swift</span>
+          </div>
+          <p class="copy">&copy;Swift Corporation</p>
+        </div>  
+        <div class="company">
+          <h2>Company</h2>
+          <div class="comp">
+            <p>About Us</p>
+            <p>Swift Corporate</p>
+            <p>Careers</p>
+            <p>Team</p>
+            <p>Swift One</p>
+            <p>Swift Instamart</p>
+            <p>Swift Dineout</p>
+            <p>Swift magic</p>
+            <p>Minis</p>
+          </div>
+        </div>
+        <div class="info">
+          <div class="contact">
+            <h2>Contact us</h2>
+            <div class="cont">
+              <p>Help & Support</p>
+              <p>Partner With Us</p>
+              <p>Ride With Us</p>
+            </div>
+          </div>
+          <div class="legal">
+            <h2>Legal</h2>
+            <div class="leg">
+              <p>Terms & Conditions</p>
+              <p>Cookie Policy</p>
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+        <div class="available">
+          <h2>Available in:</h2>
+          <div class="avail">
+            <p>Bangolore</p>
+            <p>Gurugram</p>
+            <p>Hyderabad</p>
+            <p>Delhi</p>
+            <p>Mumbai</p>
+            <p>Pune</p>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="life">
+            <h2>Life at Swift</h2>
+            <div class="lif">
+              <p>Explore With Swift</p>
+              <p>Swift News</p>
+              <p>Snackables</p>
+            </ul>
+          </div>
+          <div class="social">
+            <h2>Social links</h2>
+            <div class="links">
+              <i class="fa-brands fa-linkedin"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </footer>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+      import { getAuth, signInWithEmailAndPassword,createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyDG_Kur0oyNqEXOqShx01utx0X-V18wr4E",
+        authDomain: "projectlogin-6d609.firebaseapp.com",
+        projectId: "projectlogin-6d609",
+        storageBucket: "projectlogin-6d609.firebasestorage.app",
+        messagingSenderId: "612238451985",
+        appId: "1:612238451985:web:baac97acf8644ebf9318b0"
+      };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.onload = function () {
+    // Show the modal after 3 seconds
+    setTimeout(() => {
+      const modal = document.getElementById('authModal');
+      modal.style.display = 'flex'; // Show modal
+    }, 1000);
+  
+    // Close the modal when clicking the close button
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener('click', () => {
+      const modal = document.getElementById('authModal');
+      modal.style.display = 'none';
+    });
+   const modal = document.getElementById("authModal");
+   const loginpage = document.getElementById("guest");
+   loginpage.addEventListener("click",()=>{
+      // window.location.href="index.html";
+       modal.style.display="none";
+   })
+   
+  
+    // Toggle between login and register forms
+    const switchToRegister = document.getElementById('switchToRegister');
+    const switchToLogin = document.getElementById('switchToLogin');
+    const loginFormContainer = document.getElementById('loginFormContainer');
+    const registerFormContainer = document.getElementById('registerFormContainer');
+  
+    switchToRegister.addEventListener('click', (event) => {
+      event.preventDefault();
+      loginFormContainer.style.display = 'none';
+      registerFormContainer.style.display = 'block';
+    });
+  
+    switchToLogin.addEventListener('click', (event) => {
+      event.preventDefault();
+      registerFormContainer.style.display = 'none';
+      loginFormContainer.style.display = 'block';
+    });
+  
+    // Login form submission
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+  
+      
+        signInWithEmailAndPassword(auth,email, password)
+        .then((userCredential) => {
+          alert('Login successful!');
+          document.getElementById('authModal').style.display = 'none';
+           // Close modal
+        })
+        .catch((error) => {
+          document.getElementById('loginErrorMessage').textContent = error.message;
+        });
+    });
+  
+    // Register form submission
+    const registerForm = document.getElementById('registerForm');
+    registerForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+  
+      
+        createUserWithEmailAndPassword(auth,email, password)
+        .then((userCredential) => {
+          alert('Registration successful!');
+          // document.getElementById('authModal').style.display = 'none';
+          // window.location.reload();
+          // document.getElementById("authModal").style.display = "block"; // Close modal
+        })
+        .catch((error) => {
+          document.getElementById('registerErrorMessage').textContent = error.message;
+          window.location.reload();
+        });
+    });
+  };
+    
+  </script>
+  <script src="./index.js"></script>
+</body>
 </html>
+
