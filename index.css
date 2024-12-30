@@ -10,18 +10,25 @@ body{
     background-color: #EBF4F6;
     /* display: none; */
 }
+<<<<<<< HEAD
 header{
     position: sticky;
     z-index: 10;
     top: 0%;
 }
+=======
+
+>>>>>>> 05d464e3f9ff60eb544b84db2079d4798dd13af9
 nav{
     display: flex;
     justify-content: space-between;
     background-color:#071952;
     padding: 12px 30px;
+<<<<<<< HEAD
     /* position: sticky;
     z-index: 10; */
+=======
+>>>>>>> 05d464e3f9ff60eb544b84db2079d4798dd13af9
     /* z-index: 10; */
 }
 .logo{
