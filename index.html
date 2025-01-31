@@ -17,6 +17,7 @@
       </div>
       <ul id="menu-list">
         <!-- <li><a href="#">Search</a>&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i></li> -->
+          <li><a href="" id="login" >Login</a></li>
         <li><a href="./corporate.html">Swift Corporate</a>&nbsp;&nbsp;<i class="fa fa-globe" aria-hidden="true"></i></li>
         <li><a href="./partner.html">Partner With Us</a>&nbsp;&nbsp;<i class="fa-solid fa-handshake-angle"></i></li>
         <!-- <li><a href="./signUp.html">Log In</a>&nbsp;&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></li> -->
@@ -191,13 +192,14 @@
       };
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
-
-    window.onload = function () {
+    let login = document.addEventListener("login");
+    let Login = function (event) {
     // Show the modal after 3 seconds
+        event.preventDefault();
     setTimeout(() => {
       const modal = document.getElementById('authModal');
       modal.style.display = 'flex'; // Show modal
-    }, 3000);
+    }, 100);
   
     // Close the modal when clicking the close button
     const closeModal = document.getElementById('closeModal');
@@ -271,6 +273,7 @@
         });
     });
   };
+      login.addEventListener("click",Login)
     
   </script>
   <script src="./index.js"></script>
