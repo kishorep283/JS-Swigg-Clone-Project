@@ -88,9 +88,10 @@ document.querySelector(".cart-items").addEventListener("click",(event)=>{
 })
 let closemodal = document.getElementById("closeModal");
 let modal = document.getElementById("modal")
+let val=JSON.parse(sessionStorage.getItem("login"))
 document.getElementById("check-btn").addEventListener("click",(event) => {
     event.preventDefault();
-    
+    if(val === "logged"){
         if(cart.length === 0){
             alert("your cart is Empty");
         }
@@ -107,6 +108,9 @@ document.getElementById("check-btn").addEventListener("click",(event) => {
         localStorage.removeItem("cart");
         cart=[];
         updatecartpage();
+    }else{
+        alert(`please login before ,check-out`)
+    }
 })
 
 closemodal.addEventListener("click",()=>{
