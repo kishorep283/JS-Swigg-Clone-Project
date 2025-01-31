@@ -263,6 +263,7 @@
         createUserWithEmailAndPassword(auth,email, password)
         .then((userCredential) => {
           alert('Registration successful!');
+            sessionStorage.setItem("login","islogged");
           // document.getElementById('authModal').style.display = 'none';
           // window.location.reload();
           // document.getElementById("authModal").style.display = "block"; // Close modal
