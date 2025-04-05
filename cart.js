@@ -91,7 +91,7 @@ let modal = document.getElementById("modal")
 let val=JSON.parse(sessionStorage.getItem("login"))
 document.getElementById("check-btn").addEventListener("click",(event) => {
     event.preventDefault();
-    if(val === "logged"){
+    if(val === "islogged"){
         if(cart.length === 0){
             alert("your cart is Empty");
         }
